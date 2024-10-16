@@ -1,1 +1,1 @@
-# spectral_moments
+# Code for spectral moment estimation
