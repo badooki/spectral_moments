@@ -13,6 +13,10 @@ The code in this repository computes the unbiased estimate of the spectral momen
 ---
 
 ## Code
+
+Requirement:
+- JAX 
+
 `momest` function in `estimator.py` implements our dynamic programming algorithm for computing the spectral moments from a measurement matrix. A typical usage will look like
 ```
 moment_estimates = momest(X0,X1,kmax=5,reps=1)
