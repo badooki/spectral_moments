@@ -13,5 +13,14 @@ The code in this repository computes the unbiased estimate of the spectral momen
 ---
 
 ## Code
-`momest` function in `estimator.py` implements our dynamic programming algorithm for computing the spectral moments from a measurement matrix (or two measurement matrices if two trials are available).
+`momest` function in `estimator.py` implements our dynamic programming algorithm for computing the spectral moments from a measurement matrix. A typical usage will look like
+```
+moment_estimates = momest(X0,X1,kmax=5,reps=1)
+```
+The function computes the moment estimates from the 2nd moment to kmax-th moment. For example, If kmax=4 is given, the function will return the 2nd, 3rd, and 4th moments.
+
+If there is a noise in measurement, one can provide two measurements X0 and X1 matrices from two trials. This will help reduce trial-to-trial noise. If only one instance of the measurement matrix X is available, simply provide X as X0 and X1. 
+
+Since this algorithm only averages over the cyclic paths of increasing indices, the function also provides an option to repeat this algorithm over multiple random row-column permutations of the provided matrix/matrices. The number of repetitions is specified by reps.
+
 The Jupyter notebooks in this repository reproduce the plots in the paper.
