@@ -1,4 +1,4 @@
-# SPECTAL MOMENT ESTIMATOR
+# SPECTRAL MOMENT ESTIMATOR
 
 ## Understanding the eigenvalue spectrum of an infinitely large matrix from its sample submatrices
 
